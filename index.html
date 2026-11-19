@@ -1288,7 +1288,7 @@
     <div class="sync-bar-wrap admin-only">
       <div class="sync-pill">
         <span class="sync-dot online" id="syncDot"></span>
-        <span id="syncText">Netlify + Sheets: 29 SKUs · 58 Fotos (01:47:39)</span>
+        <span id="syncText">Netlify + Sheets: 29 SKUs · 58 Fotos (01:52:22)</span>
       </div>
       <button class="btn-sync-now" onclick="limpiarCacheFotosYRecargarDrive()">
         🔄 Actualizar Ahora
@@ -3471,6 +3471,7 @@
         if (ev.persisted) checkLiveCatalogUpdate();
       });
       window.addEventListener("load", () => setTimeout(checkLiveCatalogUpdate, 1500));
+      setInterval(() => { if (document.visibilityState === "visible") checkLiveCatalogUpdate(); }, 60000);
     })();
   </script>
 </body>
