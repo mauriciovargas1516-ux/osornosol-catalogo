@@ -1288,7 +1288,7 @@
     <div class="sync-bar-wrap admin-only">
       <div class="sync-pill">
         <span class="sync-dot online" id="syncDot"></span>
-        <span id="syncText">Cloudflare Pages + API Directa: 27 SKUs · 56 Fotos (21:50:23)</span>
+        <span id="syncText">Cloudflare Pages + API Directa: 27 SKUs · 56 Fotos (21:56:51)</span>
       </div>
       <button class="btn-sync-now" onclick="limpiarCacheFotosYRecargarDrive()">
         🔄 Actualizar Ahora
@@ -3420,11 +3420,8 @@
     aplicarIdentidadDeMarcaEnDOM();
     renderCatalog();
     renderCart();
-    sincronizarConGoogleSheets(false, true);
-
-    document.addEventListener("visibilitychange", () => {
-      if (document.visibilityState === "visible") sincronizarConGoogleSheets(false, true);
-    });
+    // Desactivado: la VM actualiza la tienda directo en Cloudflare Pages (sin parpadeos ni gasto de Apps Script)
+    // sincronizarConGoogleSheets(false, true);
   </script>
 
   <script>
